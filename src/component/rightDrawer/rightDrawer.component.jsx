@@ -79,14 +79,6 @@ export default function PermanentDrawerRight() {
                         </ListItemText>
                     </ListItem>
 
-
-
-                    {/* {['Schedule', 'Categories', 'Your Progress', 'Direct Messages', 'Your Profile', 'Settings'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? "icon1" : "icon2"}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))} */}
                 </List>
 
             </Drawer>

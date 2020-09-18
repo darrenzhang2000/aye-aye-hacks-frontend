@@ -1,0 +1,10 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.chats-chat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

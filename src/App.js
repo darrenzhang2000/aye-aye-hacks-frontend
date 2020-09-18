@@ -13,6 +13,8 @@ import Settings from './pages/settings/settings'
 import Schedule from './pages/schedule/schedule'
 import Categories from './pages/categories/categories'
 import Progress from './pages/progress/progress';
+import Messages from './pages/messages/messages';
+
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
         <Route exact path='/schedule' component={Schedule} />
         <Route exact path='/categories' component={Categories} />
         <Route exact path='/progress' component={Progress} />
+        <Route exact path='/messages' component={Messages} />
       </div>
 
       <RightDrawer />
