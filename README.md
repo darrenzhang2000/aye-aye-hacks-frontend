@@ -68,3 +68,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 # signup-starting-template
 # aye-aye-hacks-frontend
+# signup-template
+# signup-template
+# signup-template
