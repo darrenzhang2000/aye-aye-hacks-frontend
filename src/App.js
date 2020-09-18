@@ -8,7 +8,7 @@ import store from './redux/redux';
 import Header from './component/header/header.component'
 import Footer from './component/bottom/bottom.component'
 import LeftDrawer from './component/leftDrawer/leftDrawer.component'
-
+import RightDrawer from './component/rightDrawer/rightDrawer.component'
 
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
 
       <Route exact path='/' component={Landing} />
       <Route exact path='/register' component={Register} />
+      
+      <RightDrawer/>
       <Footer />
     </div>
     </Provider>
