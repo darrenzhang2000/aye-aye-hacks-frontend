@@ -147,7 +147,7 @@ const Signin = () => {
             />
             <div className={classes.button}>
                 <Button variant="contained" color="primary" onClick={onSubmit}>
-                    Submit
+                    Log in
                 </Button>
             </div>
         </form>

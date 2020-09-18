@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from './redux/redux';
 import Header from './component/header/header.component'
 import Footer from './component/bottom/bottom.component'
-
+import LeftDrawer from './component/leftDrawer/leftDrawer.component'
 
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
 
     <div>
       <Header />
+      <LeftDrawer/>
+
       <Route exact path='/' component={Landing} />
       <Route exact path='/register' component={Register} />
       <Footer />

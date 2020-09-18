@@ -57,10 +57,10 @@ const Landing = () => {
                 <div className={classes.mainimage} style={styles}>
                     <div className={classes.infor}>
                         <Typography variant='h3' align='justify'>
-                            <b>iProfile</b>
+                            <b>Fitogether</b>
                         </Typography>
                         <Typography variant='h4' align='left'>
-                            Take your resume to the next level
+                        Virtual workout with your friends and share your seamlessly integrated health statistics to hold each other accountable
                         </Typography>
                     </div> 
                 </div>
