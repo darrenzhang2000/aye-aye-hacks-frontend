@@ -10,6 +10,7 @@ import Footer from './component/bottom/bottom.component'
 import LeftDrawer from './component/leftDrawer/leftDrawer.component'
 import RightDrawer from './component/rightDrawer/rightDrawer.component'
 import Settings from './pages/settings/settings'
+import Schedule from './pages/schedule/schedule'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/' component={Landing} />
         <Route exact path='/register' component={Register} />
         <Route exact path='/settings' component={Settings} />
+        <Route exact path='/schedule' component={Schedule} />
       </div>
 
       <RightDrawer />

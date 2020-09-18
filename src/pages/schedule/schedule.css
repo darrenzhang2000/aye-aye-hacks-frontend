@@ -1,0 +1,21 @@
+.greetings-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fitness-treasure-map {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;   
+}
+
+.middle{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
