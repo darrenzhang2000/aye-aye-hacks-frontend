@@ -4,8 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import SignupStudent from '../../component/signup/signup.component';
-import SignupRecruiter from '../../component/signup/signup.component';
-const useStyles = makeStyles((theme) => ({ 
+const useStyles = makeStyles((theme) => ({
     parent: {
         display: 'flex',
         flexDirection: 'column',
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     mainform: {
         display: 'flex',
-        flexDirection:'column',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -34,7 +33,7 @@ const Register = () => {
     const [value, setValue] = React.useState(true);
 
     const handleChange = (event, newValue) => {
-      setValue(newValue);
+        setValue(newValue);
     };
     return (
         <div className={classes.parent}>
@@ -42,33 +41,24 @@ const Register = () => {
                 <div className={classes.option}>
                     <Paper square>
                         <Tabs
-                        value={value}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        onChange={handleChange}
-                        aria-label="disabled tabs example"
-                        // disableRipple={true}
-                        centered
+                            value={value}
+                            indicatorColor="primary"
+                            textColor="primary"
+                            onChange={handleChange}
+                            aria-label="disabled tabs example"
+                            // disableRipple={true}
+                            centered
                         >
-                            <Tab label="Student" />
-                            <Tab label="Recruiter" />
+                            <Tab label="Sign Up" />
+                            {/* <Tab label="Recruiter" /> */}
                         </Tabs>
                     </Paper>
                 </div>
-                {
-                    value ?
-                    (
-                        <div className={classes.signup}>
-                            <SignupRecruiter/>
-                            
-                        </div>
-                    ) : 
-                    (
-                        <div className={classes.signup}>
-                            <SignupStudent/>
-                        </div>  
-                    )
-                }
+
+                <div className={classes.signup}>
+                    <SignupStudent />
+                </div>
+
             </div>
         </div>
     )
