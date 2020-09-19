@@ -17,15 +17,15 @@ import Categories from './pages/categories/categories'
 import Progress from './pages/progress/progress';
 import Messages from './pages/messages/messages';
 import VideoConf from './pages/workoutPlayer/videoConf';
-import Chat from './component/chat/chat';
+import Chat from './pages/messages/chats';
 
 
 function App() {
   return (
     <Provider store={store}>
 
-    <Header />
-    <LeftDrawer />
+      <Header />
+      <LeftDrawer />
 
       <div className="main-content">
         <Route exact path='/' component={Landing} />
@@ -36,12 +36,12 @@ function App() {
         <Route exact path='/progress' component={Progress} />
         <Route exact path='/messages' component={Messages} />
         <Route exact path='/videoConf' component={VideoConf} />
-        <Route exact path='/chat' component={Chat} />
+        <Route exact path='/chats' component={Chat} />
       </div>
 
-      <RightDrawer /> 
+      <RightDrawer />
       <Footer />
-   </Provider>
+    </Provider>
 
   );
 }

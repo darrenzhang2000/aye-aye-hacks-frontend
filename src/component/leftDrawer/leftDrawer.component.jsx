@@ -78,6 +78,10 @@ export default function PermanentDrawerLeft() {
             <ListItemText><Link to="/messages"><Typography>Direct Message</Typography></Link></ListItemText>
           </ListItem>
           <ListItem>
+            <ListItemIcon><Settings /></ListItemIcon>
+            <ListItemText><Link to="/chats"><Typography>Peer Chats</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
             <ListItemIcon><AccountBox /></ListItemIcon>
             <ListItemText><Link to="/profile"><Typography>Your Profile</Typography></Link></ListItemText>
           </ListItem>

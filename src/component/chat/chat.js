@@ -1,72 +1,69 @@
-import React, { useEffect, useState } from 'react'
-import socketIOClient from "socket.io-client";
+import React, { useState, useEffect } from "react";
+import queryString from 'query-string';
+import io from 'socket.io-client';
 
-const Chat = props => {
-    const [socket, setSocket] = useState("")
+import "./Chat.css";
+import InfoBar from "../InfoBar/InfoBar";
+import Input from "../Input/Input";
+import Messages from "../Messages/Messages";
 
-    // useEffect(() => {
-    //     console.log('injecting socket.io script')
+let socket;
 
-    //     const script = document.createElement('script');
+const Chat = ({ location }) => {
 
-    //     script.src = 'https://cdn.socket.io/socket.io-1.0.0.js'
-    //     script.async = true
+    const [name, setName] = useState('');
+    const [room, setRoom] = useState('');
+    const [messages, setMessages] = useState([]);
+    const [message, setMessage] = useState('');
 
-    //     document.body.appendChild(script)
 
-    //     return () => {
-    //         document.body.removeChild(script)
-    //     }
-
-    // }, [])
-
-    useEffect(async () => {
-        console.log('connecting to io')
-        const ENDPOINT = 'http://localhost:5000'
-        const socket = await socketIOClient(ENDPOINT);
-        // socket.on("FromAPI", data => {
-        //     console.log(data);
-        // });
-
-    }, [])
+    const ENDPOINT = 'http://localhost:5000';
 
     useEffect(() => {
-        console.log('ss', socket)
+        const { name, room } = queryString.parse(location.search);
+        socket = io(ENDPOINT);
 
+        setName(name);
+        setRoom(room);
 
-        return () => socket.disconnect()
-    }, [])
+        socket.emit('join', { name, room }, (error) => {
+            if (error) {
+                do {
+                    alert(error + " Go back, & please take another Username");
+                } while (error);
+            }
+        });
 
-    const handleOnClick = (e) => {
-        e.preventDefault()
-        //socket
+        return () => {
+            socket.emit("disconnect");
+            socket.off();
+        }
+
+    }, [ENDPOINT, location.search]);
+
+    useEffect(() => {
+        socket.on('message', (message) => {
+            setMessages([...messages, message]);
+        })
+    }, [messages])
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+
+        if (message) {
+            socket.emit('sendMessage', message, () => setMessage(''));
+        }
     }
 
-    return <div>
-        <html lang="en">
-            <head>
-                <meta charset="UTF-8" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>WebSockets</title>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-                <link href="/styles.css" rel="stylesheet" />
-            </head>
-            <body>
-                <div id='mario-chat'>
-                    <div id='chat-window'>
-                        <div id='output'></div>
-                        <div id='feedback'></div>
-                    </div>
-                    <input id='handle' type='text' placeholder='Handle' />
-                    <input id='message' type='text' placeholder="Message" />
-                    <button id='send'>Send</button>
-                </div>
-
-                <script src="/chat.js"></script>
-            </body>
-        </html>
-    </div>
-
+    return (
+        <div className="outerContainer">
+            <div className="container">
+                <InfoBar room={room} />
+                <Messages messages={messages} name={name} />
+                <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+            </div>
+        </div>
+    )
 }
 
-export default Chat
+export default Chat;
