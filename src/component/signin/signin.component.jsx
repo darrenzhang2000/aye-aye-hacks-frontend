@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {makeStyles, withStyles} from '@material-ui/core/styles';
 import {TextField, Button} from '@material-ui/core';
 import axios from 'axios';
-import { storeEmail, storeUserProfile } from '../../redux/redux';
+import { storeAccountInfo, storeEmail, storeUserProfile } from '../../redux/redux';
 import { useDispatch } from 'react-redux';
 import Modal from 'react-modal';
 const customStyles = {
@@ -61,6 +61,7 @@ const Signin = () => {
     const [email, setEmail] = React.useState();
     const [password, setPass] = React.useState();
     const [success, setSuccess] = React.useState(0);
+    const [needToSetProfile, setNeedToSetProfle] = React.useState(false)
 
     /* Use for modal true */
     var subtitle;
@@ -86,25 +87,41 @@ const Signin = () => {
     const [modalIsOpenFalse,setIsOpenFalse] = React.useState(false);
     /****************************************************************/
 
+
     const onSubmit = () => {
         axios.get('http://localhost:5000/user/login', {params: {
             email: email, 
             password: password
         }}).then(
-            _ => {
+            loginRes => {
+                console.log('z ',loginRes)
                 dispatch(storeEmail(email));
                 axios.get(`http://localhost:5000/user/email/${email}/profile`)
                 .then(
                     res => {
-                        
-                        // if user's profile is set up
+                        console.log('ress', res)
+                        // user exists and user's profile is set up
                         if(res.data.success){
                             dispatch(storeUserProfile(res.data.profile))
                             setIsOpenTrue(true);
                             setIsOpenFalse(false);
-                        }else{ // user's profile isn't set up
+
+                            // fetch and store account info in redux
+                            axios.get(`http://localhost:5000/user/email/${email}/profile`)
+                            .then( res => {
+                                console.log(res.data)
+                                // dispatch(storeAccountInfo())
+                            })
+                        }
+                        // else if(res.data.message="User does not exist"){
+                        //     setIsOpenFalse(true);
+                        // }
+                        else{ 
+                            // user's profile isn't set up
                             console.log('user profile is not set up')
-                            setIsOpenFalse(true);
+                            // Login Success! Set up your account
+                            setNeedToSetProfle(true)
+                            // setIsOpenFalse(true);
                             setIsOpenTrue(false);
                         }
                         console.log(res)
@@ -159,8 +176,8 @@ const Signin = () => {
         
         <Modal
           isOpen={modalIsOpenTrue}
-        //   onAfterOpen={afterOpenModalTrue}
-        //   onRequestClose={closeModalTrue}
+          onAfterOpen={afterOpenModalTrue}
+          onRequestClose={closeModalTrue}
           style={customStyles}
           contentLabel="Modal for succesfully login"
         >
@@ -173,6 +190,21 @@ const Signin = () => {
         </Modal>
 
         <Modal
+          isOpen={needToSetProfile}
+          onAfterOpen={afterOpenModalTrue}
+          onRequestClose={closeModalTrue}
+          style={customStyles}
+          contentLabel="Modal for redirection to settings page"
+        >
+
+            <h2 ref={_subtitle => (subtitle = _subtitle)}>Congrats, You have successfully logged in. </h2>
+            <div style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-between'} }>
+                <Link to='/settings'><Button variant="contained" color="primary">Set Up Your Account</Button></Link>
+            </div>
+            
+        </Modal>
+
+        <Modal
           isOpen={modalIsOpenFalse}
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
@@ -180,11 +212,10 @@ const Signin = () => {
           contentLabel="Example Modal"
         >
 
-            <h2 ref={_subtitle => (subtitle = _subtitle)}>Sorry! Email or Password is not correctly, or you need update your profile.</h2>
+            <h2 ref={_subtitle => (subtitle = _subtitle)}>Sorry! Email or Password is not correct.</h2>
             <div style={ {display: 'flex', flexDirection: 'row', justifyContent: 'space-between'} }>
                 <Button onClick={closeModal} variant="contained" color="secondary" style={{height: '40px', marginTop: '15px'}}>close</Button>
                 <Link to='/register'><Button variant="contained" color="primary">Register</Button></Link>
-                <Link to='/onboarding1'><Button variant="contained" color="primary">Profile</Button></Link>
             </div>
             
         </Modal>

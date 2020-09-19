@@ -1,36 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FormControlLabel, Switch, TextField, Typography, Button } from '@material-ui/core'
 import "./settings.css"
+import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { setName, setDateOfBirth, setCountry, setGender, setShareWithNetwork, setGoal } from '../../redux/redux'
 
 const Settings = (props) => {
+    const dispatch = useDispatch()
+    const email = useSelector(state => state.email)
+    const name = useSelector(state => state.name)
+    const dateOfBirth = useSelector(state => state.dateOfBirth)
+    const gender = useSelector(state => state.gender)
+    const country = useSelector(state => state.country)
+    const shareWithNetwork = useSelector(state => state.shareWithNetwork)
+    const goal = useSelector(state => state.goal)
+
+    const handleOnSubmit = (e) => {
+        e.preventDefault()
+
+
+        const body = {
+            goal, email, name, dateOfBirth, gender, country, shareWithNetwork
+        }
+        console.log(body)
+
+        axios.post(`http://localhost:5000/user/email/${email}/profile`, body, (err, res) => {
+            console.log('res', res)
+        })
+    }
+
     return <div className="background">
 
-        <p className="goal-title">Setting your goal</p>
-        <TextField
-            required
-            id="filled-required"
-            label="Type your fitness goal here"
-            defaultValue=""
-            variant="outlined"
-        />
-
-        <p className="goal-title">Share your goal and progress</p>
-
-        <FormControlLabel
-            control={
-                <Switch
-                    checked={true}
-                    onChange={() => { }}
-                    name="switch"
-                />
-            }
-            label="Share with your network"
-        />
-        <p>(otherwise your statistics will remain private to yourself)</p>
-
-        <p className="goal-title">Account Information</p>
-
         <form>
+            <p className="goal-title">Setting your goal</p>
+            <TextField
+                required
+                id="filled-required"
+                label="Type your fitness goal here"
+                defaultValue=""
+                variant="outlined"
+                value={goal}
+                onChange={e => {
+                    console.log('oc', e.target.value)
+                    dispatch(setGoal(e.target.value))
+                }}
+            />
+
+            <p className="goal-title">Share your goal and progress</p>
+
+            <FormControlLabel
+                control={
+                    <Switch
+                        checked={shareWithNetwork}
+                        onChange={() => { dispatch(setShareWithNetwork(!shareWithNetwork)) }}
+                        name="switch"
+                    />
+                }
+                label="Share with your network"
+            />
+            <p>(otherwise your statistics will remain private to yourself)</p>
+
+            <p className="goal-title">Account Information</p>
+
+
+
             <div className="setting-form">
                 <TextField
                     required
@@ -38,13 +71,8 @@ const Settings = (props) => {
                     label="Name"
                     defaultValue=""
                     variant="standard"
-                />
-                <TextField
-                    required
-                    id="filled-required"
-                    label="Email"
-                    defaultValue=""
-                    variant="standard"
+                    value={name}
+                    onChange={(e) => dispatch(setName(e.target.value))}
                 />
                 <TextField
                     required
@@ -52,6 +80,8 @@ const Settings = (props) => {
                     label="Date of birth"
                     defaultValue=""
                     variant="standard"
+                    value={dateOfBirth}
+                    onChange={e => dispatch(setDateOfBirth(e.target.value))}
                 />
                 <TextField
                     required
@@ -59,6 +89,8 @@ const Settings = (props) => {
                     label="Gender"
                     defaultValue=""
                     variant="standard"
+                    value={gender}
+                    onChange={e => dispatch(setGender(e.target.value))}
                 />
                 <TextField
                     required
@@ -66,11 +98,13 @@ const Settings = (props) => {
                     label="Country"
                     defaultValue=""
                     variant="standard"
+                    value={country}
+                    onChange={e => dispatch(setCountry(e.target.value))}
                 />
             </div>
         </form>
         <div className="button">
-            <Button variant="outlined" color="primary" >
+            <Button variant="outlined" color="primary" onClick={handleOnSubmit} >
                 <p className="buttonText">Finish</p>
             </Button>
         </div>
