@@ -1,7 +1,7 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import {Avatar } from '@material-ui/core'
+import { Avatar } from '@material-ui/core'
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { AccessTime, Category, Assessment, Sms, AccountBox, Settings } from '@material-ui/icons';
+import { Link } from 'react-router-dom'
 
 
 const drawerWidth = 240;
@@ -53,37 +54,37 @@ export default function PermanentDrawerLeft() {
       >
         <div className={classes.toolbar} />
         <List>
-            <Avatar> U </Avatar>
-            <ListItem>INSERT PROFILE PIC HERE</ListItem>
+          <Avatar> U </Avatar>
+          <ListItem>INSERT PROFILE PIC HERE</ListItem>
 
-            <ListItem>
-                <Typography>Anna Smith</Typography>
-            </ListItem>
+          <ListItem>
+            <Typography>Anna Smith</Typography>
+          </ListItem>
 
-        <ListItem>
-            <ListItemIcon><AccessTime/></ListItemIcon>
-            <ListItemText><Typography>Schedule</Typography></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><Category/></ListItemIcon>
-            <ListItemText><Typography>Categories</Typography></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><Assessment/></ListItemIcon>
-            <ListItemText><Typography>Your Progress</Typography></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><Sms/></ListItemIcon>
-            <ListItemText><Typography>Direct Message</Typography></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><AccountBox/></ListItemIcon>
-            <ListItemText><Typography>Your Profile</Typography></ListItemText>
-        </ListItem>
-        <ListItem>
-            <ListItemIcon><Settings/></ListItemIcon>
-            <ListItemText><Typography>Settings</Typography></ListItemText>
-        </ListItem>
+          <ListItem>
+            <ListItemIcon><AccessTime /></ListItemIcon>
+            <ListItemText><Link to="/schedule" className="link"><Typography>Schedule</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon><Category /></ListItemIcon>
+            <ListItemText><Link to="categories"><Typography>Categories</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon><Assessment /></ListItemIcon>
+            <ListItemText><Link to="/progress"><Typography>Your Progress</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon><Sms /></ListItemIcon>
+            <ListItemText><Link to="/messages"><Typography>Direct Message</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon><AccountBox /></ListItemIcon>
+            <ListItemText><Link to="/profile"><Typography>Your Profile</Typography></Link></ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemIcon><Settings /></ListItemIcon>
+            <ListItemText><Link to="/settings"><Typography>Settings</Typography></Link></ListItemText>
+          </ListItem>
 
 
           {/* {['Schedule', 'Categories', 'Your Progress', 'Direct Messages', 'Your Profile', 'Settings'].map((text, index) => (
