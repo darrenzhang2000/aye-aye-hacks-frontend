@@ -6,4 +6,27 @@
 .col {
     display: flex;
     flex-direction: column;
+    font-size: x-large;
+    padding-right:30px;
+}
+.background{
+    background-color:#FBEEFF;
+    padding:20px;
+    color:#253E70;
+}
+.goal-title{
+    font-weight: 900;
+    font-size: xx-large;
+}
+.goal-text{
+    font-size: x-large;
+}
+.achieve-text{
+    align-self: center;
+}
+.chart{
+    max-width: 300px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
