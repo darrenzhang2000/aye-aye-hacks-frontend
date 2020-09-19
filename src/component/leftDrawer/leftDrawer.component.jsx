@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import { AccessTime, Category, Assessment, Sms, AccountBox, Settings } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
-
+import "./leftDrawer.css"
 
 const drawerWidth = 240;
 
@@ -25,9 +25,11 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    position: 'relative'
   },
   drawerPaper: {
     width: drawerWidth,
+    top: 80
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
@@ -44,8 +46,10 @@ export default function PermanentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+      <div className="top"></div>
+
       <Drawer
-        className={classes.drawer}
+        className={classes.drawer, "top"}
         variant="permanent"
         classes={{
           paper: classes.drawerPaper,
