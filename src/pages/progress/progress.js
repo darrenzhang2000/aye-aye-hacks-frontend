@@ -22,8 +22,7 @@ const Progress = (props) => {
 
 
         <p className="goal-title">Achievement</p>
-        <Grid container className="row">
-            <Grid sm={0} md={3}></Grid>
+        <Grid container className="row center">
 
             <Grid container md={6} className="row">
 
@@ -44,13 +43,12 @@ const Progress = (props) => {
 
             </Grid>
 
-            <Grid sm={0} md={3}></Grid>
         </Grid>
 
 
         <p className="goal-title">Categories breakdown</p>
 
-        <Grid container className="row">
+        <Grid container className="row center">
             <Grid sm={0} md={3} justify="center">
                 <VictoryPie
                     innerRadius={100}
