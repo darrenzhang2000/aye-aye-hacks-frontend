@@ -191,7 +191,8 @@ const SignupStudent = () => {
                 <div className={classes.button}>
                     <Button variant="outlined" color="primary" onClick={onSubmit}>
                         <div >
-                            Create Account</div>
+                            Create Account
+                        </div>
                     </Button>
                 </div>
             </form>

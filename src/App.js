@@ -22,7 +22,7 @@ function App() {
     <Provider store={store}>
 
       {/* <Header /> */}
-      {/* <LeftDrawer /> */}
+      <LeftDrawer />
 
       <div className="main-content">
         <Route exact path='/' component={Landing} />
@@ -35,7 +35,7 @@ function App() {
         <Route exact path='/videoConf' component={VideoConf} />
       </div>
 
-      {/* <RightDrawer /> */}
+      <RightDrawer />
       {/* <Footer /> */}
     </Provider>
 
