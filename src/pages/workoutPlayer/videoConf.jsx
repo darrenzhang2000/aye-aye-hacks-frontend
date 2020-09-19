@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 
 const VideoConf = props => {
 
 
@@ -7,7 +7,7 @@ const VideoConf = props => {
 // Selected YouTube video or stored workout video
     return <div>
         <video
-            id="my-player"
+            id="youTubeVideo"
             class="video-js"
             controls
             preload="auto"
@@ -26,7 +26,7 @@ const VideoConf = props => {
         </video>
 
         <video
-            id="my-player"
+            id="player1"
             class="video-js"
             width="400"
             hight="400"
@@ -47,7 +47,7 @@ const VideoConf = props => {
         </video>
 
         <video
-            id="my-player"
+            id="player2"
             class="video-js"
             width="400"
             hight="400"
@@ -68,7 +68,7 @@ const VideoConf = props => {
         </video>
 
         <video
-            id="my-player"
+            id="player3"
             class="video-js"
             width="400"
             hight="400"
@@ -89,7 +89,7 @@ const VideoConf = props => {
         </video>
 
         <video
-            id="my-player"
+            id="player4"
             class="video-js"
             width="400"
             hight="400"

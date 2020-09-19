@@ -14,6 +14,7 @@ import Schedule from './pages/schedule/schedule'
 import Categories from './pages/categories/categories'
 import Progress from './pages/progress/progress';
 import Messages from './pages/messages/messages';
+import VideoConf from './pages/workoutPlayer/videoConf';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/categories' component={Categories} />
         <Route exact path='/progress' component={Progress} />
         <Route exact path='/messages' component={Messages} />
+        <Route exact path='/videoConf' component={VideoConf} />
       </div>
 
       <RightDrawer />
