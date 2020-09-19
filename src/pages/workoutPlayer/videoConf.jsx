@@ -1,14 +1,11 @@
 import React from 'react';
-<script src="https://src.litix.io/videojs/3/videojs-mux.js"></script>
+
 const VideoConf = props => {
 
 
 
 // Selected YouTube video or stored workout video
     return <div>
-
-        
-
         <video
             id="my-player"
             class="video-js"
