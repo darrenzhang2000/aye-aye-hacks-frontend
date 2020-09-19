@@ -21,8 +21,8 @@ function App() {
   return (
     <Provider store={store}>
 
-      <Header />
-      <LeftDrawer />
+    <Header />
+    <LeftDrawer />
 
       <div className="main-content">
         <Route exact path='/' component={Landing} />
@@ -37,7 +37,7 @@ function App() {
 
       <RightDrawer /> 
       <Footer />
-    </Provider>
+   </Provider>
 
   );
 }

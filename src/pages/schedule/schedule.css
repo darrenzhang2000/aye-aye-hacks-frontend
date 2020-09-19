@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
+    padding:20px;
+}
+.wrapper{
+    background-color:#FBEEFF ;
 }
 
-.fitness-treasure-map {
+.fitnessTreasureMap {
  display: flex;
  flex-direction: row;
- justify-content: space-between;   
+ justify-content: space-between;  
+ padding:20px;
 }
 
 .middle{
@@ -18,4 +24,90 @@
 .row{
     display: flex;
     flex-direction: row;
+}
+
+.dateHeader{
+    margin-bottom: 30;
+    color:#253E70;
+    text-align: center;
+}
+.fitHead{
+    color:#253E70;
+    font-weight: 900;
+    font-size: x-large;
+}
+.goal-row{
+    color:#253E70;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+.goal-title{
+    font-weight: 900;
+    font-size: x-large;
+}
+.goal-block{
+    margin-left:20px;
+    font-size: large;
+}
+.progress-block{
+    display: flex;
+    margin-left:20px;
+    font-size: large;
+}
+.col{
+    margin:4px;
+}
+.progress-text{
+    align-self: center;
+}
+
+.message{
+    color:#8B00F8;
+    font-weight: 900;
+    font-size: x-large;
+    text-align: center;
+    margin: 15px;
+}
+.progress-row{
+    display: flex;
+    margin-top: 40px;
+    color:#253E70;
+    align-self: center;
+
+}
+.week-header{
+    font-weight: 900;
+    font-size: x-large;
+}
+.week-block{
+    color: #253E70;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.week-row{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.week-text{
+    font-size: x-large;
+    text-align: center;
+}
+.week-col{
+    margin:10px;
+    padding:20px;
+}
+.week-sub{
+    font-size: large;
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.button{
+    margin:5px;
+    margin-right: 50px;
 }
