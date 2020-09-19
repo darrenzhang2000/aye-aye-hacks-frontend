@@ -31,7 +31,6 @@ function App() {
         <Route exact path='/categories' component={Categories} />
         <Route exact path='/progress' component={Progress} />
         <Route exact path='/messages' component={Messages} />
-        <Route exact path='/videocall' component={workoutPlayer} />
       </div>
 
       <RightDrawer />
