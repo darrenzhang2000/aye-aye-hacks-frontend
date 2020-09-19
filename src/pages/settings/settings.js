@@ -1,19 +1,20 @@
 import React from 'react'
-import { FormControlLabel, Switch, TextField, Typography } from '@material-ui/core'
+import { FormControlLabel, Switch, TextField, Typography, Button } from '@material-ui/core'
 import "./settings.css"
 
 const Settings = (props) => {
-    return <div>
+    return <div className="background">
 
-        <Typography>Setting your goal</Typography>
+        <p className="goal-title">Setting your goal</p>
         <TextField
             required
             id="filled-required"
             label="Type your fitness goal here"
             defaultValue=""
-            variant="filled"
+            variant="outlined"
         />
 
+        <p className="goal-title">Share your goal and progress</p>
 
         <FormControlLabel
             control={
@@ -23,53 +24,56 @@ const Settings = (props) => {
                     name="switch"
                 />
             }
-            label="Share your goal and progress"
+            label="Share with your network"
         />
+        <p>(otherwise your statistics will remain private to yourself)</p>
 
-
-
-
-        <Typography>Account Information</Typography>
+        <p className="goal-title">Account Information</p>
 
         <form>
             <div className="setting-form">
                 <TextField
                     required
                     id="filled-required"
-                    label="Required"
+                    label="Name"
                     defaultValue=""
-                    variant="filled"
+                    variant="standard"
                 />
                 <TextField
                     required
                     id="filled-required"
                     label="Email"
                     defaultValue=""
-                    variant="filled"
+                    variant="standard"
                 />
                 <TextField
                     required
                     id="filled-required"
                     label="Date of birth"
                     defaultValue=""
-                    variant="filled"
+                    variant="standard"
                 />
                 <TextField
                     required
                     id="filled-required"
                     label="Gender"
                     defaultValue=""
-                    variant="filled"
+                    variant="standard"
                 />
                 <TextField
                     required
                     id="filled-required"
                     label="Country"
                     defaultValue=""
-                    variant="filled"
+                    variant="standard"
                 />
             </div>
         </form>
+        <div className="button">
+            <Button variant="outlined" color="primary" >
+                <p className="buttonText">Finish</p>
+            </Button>
+        </div>
     </div>
 }
 
