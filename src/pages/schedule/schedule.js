@@ -2,7 +2,7 @@ import { Typography, Button } from '@material-ui/core'
 import React from 'react'
 import "./schedule.css"
 import dst from "../../assets/dst.png";
-
+//comment from Catherine
 const Schedule = (props) => {
     return <div className="wrapper">
         <div className="greetings-date">
