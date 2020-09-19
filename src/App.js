@@ -23,8 +23,8 @@ function App() {
   return (
     <Provider store={store}>
 
-      <Header />
-      <LeftDrawer />
+    <Header />
+    <LeftDrawer />
 
       <div className="main-content">
         <Route exact path='/' component={Landing} />
@@ -37,9 +37,9 @@ function App() {
         <Route exact path='/videoConf' component={VideoConf} />
       </div>
 
-      <RightDrawer />
+      <RightDrawer /> 
       <Footer />
-    </Provider>
+   </Provider>
 
   );
 }
