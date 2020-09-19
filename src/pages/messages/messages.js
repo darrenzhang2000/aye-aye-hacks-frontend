@@ -10,8 +10,8 @@ const Messages = props => {
 
     return <div>
         <div className="chats-messages-buttons">
-            <Button onClick={()=>{setDisplayChats(true)}}>Chats</Button>
-            <Button onClick={()=>{setDisplayChats(false)}}>Friends</Button>
+            <Button onClick={() => { setDisplayChats(true) }}>Chats</Button>
+            <Button onClick={() => { setDisplayChats(false) }}>Friends</Button>
         </div>
 
         {displayChats ? <Chats /> : <Friends />}
