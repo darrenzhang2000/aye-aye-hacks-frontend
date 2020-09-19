@@ -24,8 +24,13 @@ function App() {
   return (
     <Provider store={store}>
 
+<<<<<<< HEAD
       <Header />
       <LeftDrawer />
+=======
+    <Header />
+    <LeftDrawer/>
+>>>>>>> 49e2fb77400905620a35f68037bbc35db2e1dd38
 
       <div className="main-content">
         <Route exact path='/' component={Landing} />
@@ -39,7 +44,11 @@ function App() {
         <Route exact path='/chats' component={Chat} />
       </div>
 
+<<<<<<< HEAD
       <RightDrawer />
+=======
+      <RightDrawer/> 
+>>>>>>> 49e2fb77400905620a35f68037bbc35db2e1dd38
       <Footer />
     </Provider>
 
