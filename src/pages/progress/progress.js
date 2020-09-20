@@ -13,18 +13,18 @@ const Progress = (props) => {
     ]);
 
     return <div className="background">
-        <p className="goal-title">Goals</p>
+        <p className="goal-title start">Goals</p>
         <Grid container className="row">
             <Grid sm={0} md={3}></Grid>
-            <Grid md={6}><p className="goal-text">Workout everyday</p></Grid>
-            <Grid md={3}><p className="goal-text">Until Sep 31</p> </Grid>
+            <Grid md={6}><p className="goal-text left">Workout everyday</p></Grid>
+            <Grid md={2}><p className="goal-text">Until Sep 31</p> </Grid>
         </Grid>
 
 
-        <p className="goal-title">Achievement</p>
+        <p className="goal-title start">Achievement</p>
         <Grid container className="row center">
 
-            <Grid container md={6} className="row">
+            <Grid container md={6} className="row between">
 
                 <div className="col">
                     <p className="achieve-text">10</p>
@@ -46,7 +46,7 @@ const Progress = (props) => {
         </Grid>
 
 
-        <p className="goal-title">Categories breakdown</p>
+        <p className="goal-title start">Categories breakdown</p>
 
         <Grid container className="row center">
             <Grid sm={0} md={3} justify="center">
@@ -59,7 +59,7 @@ const Progress = (props) => {
 
 
 
-        <p className="goal-title">Progress</p>
+        <p className="goal-title start">Progress</p>
         <p>### PLACEHOLDER FOR CALENDAR ###</p>
     </div>
 }

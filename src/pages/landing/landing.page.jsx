@@ -29,11 +29,13 @@ const useStyles = makeStyles((theme) => ({
     },
     signin: {
         position: 'relative',
-        width: '25%',
-        margin: '10% 5px 0px 5px',
-        [theme.breakpoints.down('sm')]: {
-            margin: '10% 5px 0px 5px'
-        }
+        width: '50%',
+        margin: '0',
+        // [theme.breakpoints.down('sm')]: {
+        //     margin: '10% 5px 0px 5px'
+        // },
+        background: 'white',
+        padding: '200px 30px 0px 30px',
     },
     infor: {
         display: 'flex',
@@ -61,7 +63,6 @@ const Landing = () => {
                         </Typography>
                         <Typography variant='h4' align='left'>
                         Virtual workout with your friends and share your seamlessly integrated health statistics to hold each other accountable
-                        </Typography>
                     </div>  */}
                 </div>
                 <div className={classes.signin}>

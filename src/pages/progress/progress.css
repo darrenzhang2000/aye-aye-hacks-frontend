@@ -36,3 +36,16 @@
 .center{
     justify-content: space-around;
 }
+
+.left{
+    margin-left: 19px;
+}
+
+.start{
+    display: flex;
+    flex-direction: row;
+}
+
+.between{
+    justify-content: space-between;
+}

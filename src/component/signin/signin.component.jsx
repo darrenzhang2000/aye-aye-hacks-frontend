@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
     },
     newaccount: {
         marginTop: '10px'
+    },
+    half: {
+        
     }
 }));
 
@@ -134,7 +137,7 @@ const Signin = () => {
     }  
 
     return(
-    <div className={classes.mainform}>
+    <div className={classes.mainform, classes.half}>
         <form className={classes.form}>
             <InputField 
             className={classes.input}

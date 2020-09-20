@@ -17,16 +17,16 @@ const Schedule = (props) => {
             </div>
 
             <div className="middle">
-                <div className="goal-row">
-                    <div className="goal-title">Goal |</div>
-                    <div className="goal-block">
-                        <div className="goal-message">Workout everyday and abs twice a week</div>
-                        <div className="goal-date">Until September 31</div>
+                <div className="goal-row start">
+                    <div className="goal-title start">Goal |</div>
+                    <div className="goal-block left">
+                        <div className="goal-message left">Workout everyday and abs twice a week</div>
+                        <div className="goal-date left">Until September 31</div>
                     </div>
                 </div>
 
-                <div className="progress-row">
-                    <div className="goal-title">
+                <div className="progress-row start">
+                    <div className="goal-title start">
                         Progress |
                     </div>
                     <div className="progress-block">
@@ -81,21 +81,17 @@ const Schedule = (props) => {
             <p className="week-header">Suggested Workout</p>
             <p>###VIDEO HERE###</p>
             <div className="buttons">
-                <div className="button">
-                    <Button variant="outlined" color="primary" >
-                        Start Workout
+                <Button variant="outlined" color="primary" className="button">
+                    <p className="blue">Start Workout</p>
                     </Button>
-                </div>
-                <div className="button">
-                    <Button variant="outlined" color="primary" >
-                        Schedule
-                    </Button>
-                </div>
+                <Button  variant="outlined" color="primary" className="button">
+                    <p className="blue">Schedule</p>
+                </Button>
             </div>
+
+
+
         </div>
-
-
-
     </div>
 }
 

@@ -1,113 +1,126 @@
 .greetings-date {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 20px;
 }
-.wrapper{
-    background-color:#FBEEFF ;
+.wrapper {
+  background-color: #fbeeff;
 }
 
 .fitnessTreasureMap {
- display: flex;
- flex-direction: row;
- justify-content: space-between;  
- padding:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.middle{
-    display: flex;
-    flex-direction: column;
+.middle {
+  display: flex;
+  flex-direction: column;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
-.dateHeader{
-    margin-bottom: 30;
-    color:#253E70;
-    text-align: center;
+.dateHeader {
+  margin-bottom: 30;
+  color: #253e70;
+  text-align: center;
 }
-.fitHead{
-    color:#253E70;
-    font-weight: 900;
-    font-size: x-large;
+.fitHead {
+  color: #253e70;
+  font-weight: 900;
+  font-size: x-large;
 }
-.goal-row{
-    color:#253E70;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
+.goal-row {
+  color: #253e70;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 533px;
 }
-.goal-title{
-    font-weight: 900;
-    font-size: x-large;
+.goal-title {
+  width: 160px;
+  font-weight: 900;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row-reverse;
 }
-.goal-block{
-    margin-left:20px;
-    font-size: large;
+.goal-block {
+  margin-left: 20px;
+  font-size: large;
 }
-.progress-block{
-    display: flex;
-    margin-left:20px;
-    font-size: large;
+.progress-block {
+  display: flex;
+  margin-left: 20px;
+  font-size: large;
 }
-.col{
-    margin:4px;
+.col {
+  margin: 4px;
 }
-.progress-text{
-    align-self: center;
+.progress-text {
+  align-self: center;
 }
 
-.message{
-    color:#8B00F8;
-    font-weight: 900;
-    font-size: x-large;
-    text-align: center;
-    margin: 15px;
+.message {
+  color: #8b00f8;
+  font-weight: 900;
+  font-size: x-large;
+  text-align: center;
+  margin: 15px;
 }
-.progress-row{
-    display: flex;
-    margin-top: 40px;
-    color:#253E70;
-    align-self: center;
+.progress-row {
+  display: flex;
+  margin-top: 40px;
+  color: #253e70;
+  align-self: center;
+}
+.week-header {
+  font-weight: 900;
+  font-size: x-large;
+}
+.week-block {
+  color: #253e70;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.week-row {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.week-text {
+  font-size: x-large;
+  text-align: center;
+}
+.week-col {
+  margin: 10px;
+  padding: 20px;
+}
+.week-sub {
+  font-size: large;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.button {
+  margin: 5px;
+  margin-right: 50px;
+  width: 160px;
+  background-color: none;
+}
 
+.left {
+  margin-left: 20px;
 }
-.week-header{
-    font-weight: 900;
-    font-size: x-large;
-}
-.week-block{
-    color: #253E70;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.week-row{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-.week-text{
-    font-size: x-large;
-    text-align: center;
-}
-.week-col{
-    margin:10px;
-    padding:20px;
-}
-.week-sub{
-    font-size: large;
-    text-align: center;
-}
-.buttons{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.button{
-    margin:5px;
-    margin-right: 50px;
+
+.blue {
+  color: blue;
 }

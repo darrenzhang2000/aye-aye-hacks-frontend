@@ -17,7 +17,7 @@ import Categories from './pages/categories/categories'
 import Progress from './pages/progress/progress';
 import Messages from './pages/messages/messages';
 import VideoConf from './pages/workoutPlayer/videoConf';
-import Chat from './pages/messages/chats';
+import Chat from './component/chat/chat';
 
 
 function App() {
@@ -36,10 +36,10 @@ function App() {
         <Route exact path='/progress' component={Progress} />
         <Route exact path='/messages' component={Messages} />
         <Route exact path='/videoConf' component={VideoConf} />
-        <Route exact path='/chats' component={Chat} />
+        <Route exact path='/chat' component={Chat} />
       </div>
 
-      <RightDrawer />
+      {/* <RightDrawer /> */}
       <Footer />
     </Provider>
 

@@ -58,8 +58,9 @@ export default function PermanentDrawerLeft() {
       >
         <div className={classes.toolbar} />
         <List>
+          <ListItem className="center">
           <Avatar> U </Avatar>
-          <ListItem>INSERT PROFILE PIC HERE</ListItem>
+          </ListItem>
 
           <ListItem>
             <Typography>Anna Smith</Typography>
@@ -83,24 +84,13 @@ export default function PermanentDrawerLeft() {
           </ListItem>
           <ListItem>
             <ListItemIcon><Settings /></ListItemIcon>
-            <ListItemText><Link to="/chats"><Typography>Peer Chats</Typography></Link></ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemIcon><AccountBox /></ListItemIcon>
-            <ListItemText><Link to="/profile"><Typography>Your Profile</Typography></Link></ListItemText>
+            <ListItemText><Link to="/chat"><Typography>Peer Chats</Typography></Link></ListItemText>
           </ListItem>
           <ListItem>
             <ListItemIcon><Settings /></ListItemIcon>
             <ListItemText><Link to="/settings"><Typography>Settings</Typography></Link></ListItemText>
           </ListItem>
 
-
-          {/* {['Schedule', 'Categories', 'Your Progress', 'Direct Messages', 'Your Profile', 'Settings'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? "icon1" : "icon2"}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))} */}
         </List>
 
       </Drawer>

@@ -32,7 +32,7 @@ const Settings = (props) => {
     return <div className="background">
 
         <form>
-            <p className="goal-title">Setting your goal</p>
+            <p className="setting-title">Setting your goal</p>
             <TextField
                 required
                 id="filled-required"
@@ -46,7 +46,7 @@ const Settings = (props) => {
                 }}
             />
 
-            <p className="goal-title">Share your goal and progress</p>
+            <p className="setting-title">Share your goal and progress</p>
 
             <FormControlLabel
                 control={
@@ -60,7 +60,7 @@ const Settings = (props) => {
             />
             <p>(otherwise your statistics will remain private to yourself)</p>
 
-            <p className="goal-title">Account Information</p>
+            <p className="setting-title">Account Information</p>
 
 
 

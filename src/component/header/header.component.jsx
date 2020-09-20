@@ -34,9 +34,9 @@ export default function Header() {
                     <Avatar alt="Iprofile" src={logo} className={classes.large}/>
                 </IconButton>
             </Link>
-            <Link to='/home'>
+            <Link to='/'>
                 <Button variant="contained" color="primary">
-                    Home
+                    Sign In
                 </Button>
             </Link>
 
