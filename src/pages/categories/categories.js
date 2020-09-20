@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core'
+import { Grid, Typography, Button } from '@material-ui/core'
 import React from 'react'
 import Img1 from "./images/img1.png"
 import Img2 from "./images/img2.png"
@@ -13,25 +13,25 @@ import Img9 from "./images/img9.png"
 const Categories = (props) => {
     return <div>
         <Typography>Workout Treasures</Typography>
-    
+
         <Grid container>
 
             <Grid container>
-                <Grid sm={12} md={4}><img src={Img1}/></Grid>
-                <Grid sm={12} md={4}><img src={Img2}/></Grid>
-                <Grid sm={12} md={4}><img src={Img3}/></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img1} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img2} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img3} /> </Button></Grid>
             </Grid>
 
             <Grid container>
-                <Grid sm={12} md={4}><img src={Img4}/></Grid>
-                <Grid sm={12} md={4}><img src={Img5}/></Grid>
-                <Grid sm={12} md={4}><img src={Img6}/></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img4} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img5} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img6} /> </Button></Grid>
             </Grid>
 
             <Grid container>
-                <Grid sm={12} md={4}><img src={Img7}/></Grid>
-                <Grid sm={12} md={4}><img src={Img8}/></Grid>
-                <Grid sm={12} md={4}><img src={Img9}/></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img7} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img8} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button> 	<img src={Img9} /> </Button></Grid>
             </Grid>
 
         </Grid>
