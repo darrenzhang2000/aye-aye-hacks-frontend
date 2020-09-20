@@ -28,8 +28,10 @@ const Categories = (props) => {
     }
 
     const setVideo = (videoId) => {
-        dispatch(setExercise(`https://www.youtube.com/embed/${videoId}`))
-        return <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        return `https://www.youtube.com/embed/${videoId}`
+
+        // dispatch(setExercise(`https://www.youtube.com/embed/${videoId}`))
+        //return <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     }
 
     return <div>
@@ -39,7 +41,10 @@ const Categories = (props) => {
         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/8V6IBmD1qeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
             <Grid container>
-                <Grid sm={12} md={4}><Button onClick={()=>{setVideo(videos[1])}}> 	<img src={Img1} /> </Button></Grid>
+                <Grid sm={12} md={4}><Button onClick={()=>{
+                    localStorage.setItem('youtubeUrl', setVideo(videos[1]))
+                    console.log('zz', localStorage.getItem('youtubeUrl'))
+                }}> 	<img src={Img1} /> </Button></Grid>
                 <Grid sm={12} md={4}><Button onClick={()=>{setVideo(videos[2])}}> 	<img src={Img2} /> </Button></Grid>
                 <Grid sm={12} md={4}><Button onClick={()=>{setVideo(videos[3])}}> 	<img src={Img3} /> </Button></Grid>
             </Grid>
