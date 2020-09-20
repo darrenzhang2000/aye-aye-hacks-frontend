@@ -11,6 +11,7 @@ const SET_DATE_OF_BIRTH = 'SET_DATE_OF_BIRTH'
 const SET_GENDER = 'SET_GENDER'
 const SET_COUNTRY = 'SET_COUNTRY'
 const SET_GOAL = 'SET_GOAL'
+const SET_EXERCISE = 'SET_EXERCISE'
 
 const initialState = {
     email: "guestuser",
@@ -19,7 +20,8 @@ const initialState = {
     gender: "",
     country: "",
     shareWithNetwork: true,
-    goal: ""
+    goal: "",
+    exercise: ""
 }
 
 export function storeEmail(email) {
@@ -106,6 +108,15 @@ export function setGoal(goal){
     }
 }
 
+export function setExercise(exercise){
+    return {
+        type: SET_EXERCISE,
+        payload: {
+            exercise
+        }
+    }
+}
+
 
 function userReducer(state = initialState, action) {
     console.log('reducer hit')
@@ -173,6 +184,12 @@ function userReducer(state = initialState, action) {
             return {
                 ...state,
                 goal: payload.goal
+            }
+
+        case SET_EXERCISE:
+            return {
+                ...state,
+                exercise: payload.exercise
             }
 
         default:

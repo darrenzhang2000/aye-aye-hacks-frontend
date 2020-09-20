@@ -58,12 +58,12 @@ export default function PermanentDrawerLeft() {
       >
         <div className={classes.toolbar} />
         <List>
-          <ListItem className="center">
-          <Avatar> U </Avatar>
+          <ListItem style={{justifyContent: 'center'}}>
+          <Avatar className="center" style={{justifyContent: 'center'}}> U </Avatar>
           </ListItem>
 
-          <ListItem>
-            <Typography>Anna Smith</Typography>
+          <ListItem className="center" style={{justifyContent: 'center'}}>
+            <p className="name">Anna Smith</p>
           </ListItem>
 
           <ListItem>
