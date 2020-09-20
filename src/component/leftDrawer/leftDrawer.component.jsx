@@ -8,7 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import { AccessTime, Category, Assessment, Sms, AccountBox, Settings } from '@material-ui/icons';
+import { AccessTime, Category, Assessment, Sms, AccountBox, Settings, Chat } from '@material-ui/icons';
 import { Link } from 'react-router-dom'
 import "./leftDrawer.css"
 
@@ -83,8 +83,8 @@ export default function PermanentDrawerLeft() {
             <ListItemText><Link to="/messages"><Typography>Direct Message</Typography></Link></ListItemText>
           </ListItem>
           <ListItem>
-            <ListItemIcon><Settings /></ListItemIcon>
-            <ListItemText><Link to="/chat"><Typography>Peer Chats</Typography></Link></ListItemText>
+            <ListItemIcon><Chat /></ListItemIcon>
+            <ListItemText><Link to="/chats"><Typography>Peer Chats</Typography></Link></ListItemText>
           </ListItem>
           <ListItem>
             <ListItemIcon><Settings /></ListItemIcon>

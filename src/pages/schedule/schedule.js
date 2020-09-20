@@ -79,7 +79,7 @@ const Schedule = (props) => {
 
         <div className="week-block">
             <p className="week-header">Suggested Workout</p>
-            <p>###VIDEO HERE###</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oAPCPjnU1wA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
             <div className="buttons">
                 <Button variant="outlined" color="primary" className="button">
                     <p className="blue">Start Workout</p>

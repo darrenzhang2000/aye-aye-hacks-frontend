@@ -1,3 +1,11 @@
+### `How to run the project`
+Download all repos, then in command line for each project run "npm install". After that, you should be able to run "npm run build" for each project. From there, you can visit "localhost:XXXX" to enter the website, and that should provide linking to the other components.
+
+In the video call portion, you will select a video from "categories" which will then load the video meeting. Sign in, and then anyone on your local network can join the call and watch the video with you. Each user will be able play/pause the video, and stop it whenever they want. Workout stats are tracked in your profile!
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

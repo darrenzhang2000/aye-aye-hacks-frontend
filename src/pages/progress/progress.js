@@ -2,9 +2,12 @@ import { Typography, Grid } from '@material-ui/core'
 import React, { useState } from 'react'
 import "./progress.css"
 import { VictoryPie } from 'victory';
+import Calendar from 'react-calendar'
 
 
 const Progress = (props) => {
+
+    const [value, onChange] = useState(new Date());
 
     const [data, setData] = useState([
         { x: "Cats", y: 35 },
@@ -60,7 +63,10 @@ const Progress = (props) => {
 
 
         <p className="goal-title start">Progress</p>
-        <p>### PLACEHOLDER FOR CALENDAR ###</p>
+        <Calendar
+        onChange={onChange}
+        value={value}
+      />
     </div>
 }
 
