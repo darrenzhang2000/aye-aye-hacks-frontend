@@ -1,5 +1,6 @@
 {
-  "name": "sociobox-frontend",
+  "start": "PORT=3006 react-scripts start",
+  "name": "fitogether-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
