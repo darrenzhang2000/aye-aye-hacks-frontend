@@ -103,7 +103,7 @@ const Settings = (props) => {
                 />
             </div>
         </form>
-        <div className="button">
+        <div className="buttonStyle">
             <Button variant="outlined"  onClick={handleOnSubmit} >
                 <p className="buttonText">Finish</p>
             </Button>

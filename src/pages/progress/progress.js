@@ -10,9 +10,9 @@ const Progress = (props) => {
     const [value, onChange] = useState(new Date());
 
     const [data, setData] = useState([
-        { x: "Cats", y: 35 },
-        { x: "Dogs", y: 40 },
-        { x: "Birds", y: 55 }
+        { x: "Abs", y: 35 },
+        { x: "Biceps", y: 40 },
+        { x: "Legs", y: 55 }
     ]);
 
     return <div className="background">
@@ -24,11 +24,9 @@ const Progress = (props) => {
         </Grid>
 
 
-        <p className="goal-title start">Achievement</p>
-        <Grid container className="row center">
-
-            <Grid container md={6} className="row between">
-
+        <p className="goal-title start">Achievements</p>
+        <Grid container className="grid-timer">
+            <Grid container md={5} >
                 <div className="col">
                     <p className="achieve-text">10</p>
                     <p>Days</p>

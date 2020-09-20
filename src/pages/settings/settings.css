@@ -4,10 +4,10 @@
     max-width: 600px;
     margin-left: 50px;
 }
-.button{
+.buttonStyle{
     display: flex;
     justify-content: flex-end;
-    /* margin:5px; */
+       margin:5px;
 }
 .buttonText{
     margin:5px;
@@ -15,6 +15,7 @@
     padding-right: 20px;
     font-size: x-large;
     font-weight: 900;
+    color:#253E70;
 }
 
 .setting-title{

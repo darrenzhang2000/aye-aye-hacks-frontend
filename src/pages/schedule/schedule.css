@@ -44,7 +44,7 @@
   width: 533px;
 }
 .goal-title {
-  width: 160px;
+  width: 180px;
   font-weight: 900;
   font-size: x-large;
   display: flex;
@@ -113,7 +113,7 @@
 .button {
   margin: 5px;
   margin-right: 50px;
-  width: 160px;
+  width: 60px;
   background-color: none;
 }
 
@@ -123,4 +123,8 @@
 
 .blue {
   color: blue;
+}
+.iframe{
+  margin:50px;
+  padding:10px;
 }

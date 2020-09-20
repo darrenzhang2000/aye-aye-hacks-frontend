@@ -27,7 +27,7 @@
     align-self: center;
 }
 .chart{
-    max-width: 300px;
+    max-width: 250px;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -48,4 +48,8 @@
 
 .between{
     justify-content: space-between;
+}
+.grid-timer{
+    margin:10px;
+    justify-content: center;
 }

@@ -25,8 +25,8 @@ const Schedule = (props) => {
                     </div>
                 </div>
 
-                <div className="progress-row start">
-                    <div className="goal-title start">
+                <div className="progress-row">
+                    <div className="goal-title">
                         Progress |
                     </div>
                     <div className="progress-block">
@@ -79,12 +79,15 @@ const Schedule = (props) => {
 
         <div className="week-block">
             <p className="week-header">Suggested Workout</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/oAPCPjnU1wA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <div className="iframe">
+            <iframe  width="560" height="315" src="https://www.youtube.com/embed/oAPCPjnU1wA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+            </div>
             <div className="buttons">
-                <Button variant="outlined" color="primary" className="button">
+                <Button variant="outlined"  className="button">
                     <p className="blue">Start Workout</p>
                     </Button>
-                <Button  variant="outlined" color="primary" className="button">
+                <Button  variant="outlined"  className="button">
                     <p className="blue">Schedule</p>
                 </Button>
             </div>
