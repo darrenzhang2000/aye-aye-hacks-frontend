@@ -1,7 +1,9 @@
 ### `How to run the project`
 Download all repos:
 Webpages: https://github.com/darrenzhang2000/aye-aye-hacks-frontend/
+
 Video Call service: https://github.com/connorcodes/twilio-video-app-react
+
 Backend: https://github.com/darrenzhang2000/aye-aye-backend
 
 Then, in command line for each project run "npm install". After that, you should be able to run "npm run build" for each project. From there, you can visit "localhost:XXXX" to enter the website, and that should provide linking to the other components.
